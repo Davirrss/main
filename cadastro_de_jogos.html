@@ -8,25 +8,29 @@
 </head>
 <body>
     <form>
-        <label type="text">Nome:</label>
-        <br/>
-        <input type="text" id="nome" placeholder="Informe aqui">
-        <br/>
-        <label type="email">E-mail:</label>
-        <br/>
-        <input type="email" id="emaildosujeito" placeholder="Informe aqui">
-        <br/>
+        <table> 
+            <caption>Formulário de cadastro</caption>
+            <tbody>
+                <tr>
+                    <td><label type="text">Nome:</label></td>
+                    <td><input type="text" id="nome" placeholder="Informe aqui"></td>
+                </tr>
+                <tr>
+                    <td><label type="email">E-mail:</label></td>
+                    <td><input type="email" id="emaildosujeito" placeholder="Informe aqui"></td>
+                </tr>
+                <tr>
+                    <td><label>Jogos:</label><br/>
+                        <input type="radio" name="jogo" id="jogo_nulo" checked/><label for="jogo">Nenhuma</label><br/>
+                        <input type="radio" name="jogo" id="jogo_minecraft"/><label for="jogo">Minecraft</label><br/>
+                        <input type="radio" name="jogo" id="jogo_cod"/><label for="jogo">COD</label><br/>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
         <hr/>
-        <label>Jogos:</label>
-        <br/>   
-        <select>
-            <option>COD</option>
-            <option>CS_GO</option>
-            <option>Minecraft</option>
-            <option>Valorant</option>
-            <option>Nenhuma das opções</option>
-        </select>
-
+        <button id="enviar"type="submit">Enviar</button>
+        <button id="reset"type="reset">Limpar</button>
     </form>
 </body>
 </html>
