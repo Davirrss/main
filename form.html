@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <form>
+        <h1>Formulário</h1>
+        <label for="text">Informe seu nome:</label>
+        <br/>
+        <input type="text" id="nome" placeholder="Digite aqui seu nome">
+        <br/>
+        <br/>
+        <label for="text">Digite um texto:</label>
+        <br/>
+        <textarea type="textarea" rows="3" placeholder="Fale sobre você"></textarea>
+        <br/>
+        <br/>
+        <label for="email">E-mail:</label>
+        <br/>
+        <input type="email" placeholder="Seu email aqui">
+        <br/>
+        <br/>
+        <label for="number">Telefone de contato:</label>
+        <br/>
+        <input type="number" placeholder="Seu número aqui"/>
+        <br/>
+        <br/>
+        <label for="password">Senha:</label>
+        <br/>
+        <input type="password" placeholder="Informe sua senha"/>
+        <br/>
+        <br/>
+        <label>Grau de instrução:</label>
+        <br/>
+        <select>
+            <option>Fundamental incompleto</option>
+            <option>Fundamental completo</option>
+            <option>Médio incompleto</option>
+            <option>Médio completo</option>
+            <option>Superior incompleto</option>
+            <option>Superior completo</option>
+        </select>
+        <br/>
+        <br/>
+        <label>Cursos realizados:</label>
+        <br/>
+        <select multiple>
+            <option>Html</option>
+            <option>Python</option>
+            <option>Java</option>
+            <option>JavaScript</option>
+            <option>Wind Server</option>
+            <option>PostGre</option>
+        </select>
+        <br/>
+        <br/>
+        <label>Sua cor favortia?</label>
+        <br/>
+        <input type="radio" name="cor_favorita" id="cor_nula" checked/><label for="cor_favorita">Nenhuma</label><br/>
+        <input type="radio" name="cor_favorita" id="cor_vermelha"/><label for="cor_favorita">Vermelha</label><br/>
+        <input type="radio" name="cor_favorita" id="cor_verde"/><label for="cor_favorita">Verde</label><br/>
+        <input type="radio" name="cor_favorita" id="cor_amarelo"/><label for="cor_favorita">Amarelo</label><br/>
+        <input type="radio" name="cor_favorita" id="cor_azul"/><label for="cor_favorita">Azul</label><br/>
+        <br/>
+        <input type="checkbox" name="EULA" id="check_box_termos"/><label for="check_box_termos">Aceito os termos.<span></span></label>
+        <hr/>
+        <button id="enviar"type="submit">Enviar</button>
+        <button id="reset"type="reset">Limpar</button>
+    </form>
+</body>
+<footer>
+    <a href="index.html">HOME</a>
+</footer>
+</html>
