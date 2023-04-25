@@ -1,0 +1,7 @@
+HTML: Pode ser considerado uma solidificação de conteúdo servindo como molde visual, mas com uma breve introdução do trabalho no seu produto final. Onde o desenvolver agrega suas idéias e afirma suas estruturas.
+
+CSS: Tendo sua função majotitariamente voltada pela estética visual, incluindo separaçãoes de textos adequadas e afirmação de cores. Ele introduz o aspecto de um tecido para sites.
+
+JavaScript: Sua complexidade se iguala com a sua proatividade, não que ela possua um próprio sistema de reparações interna, mas sim sua interativade com o usuário. Ou seja, sua função se designa a execução de passos e leitura de informações.
+
+
