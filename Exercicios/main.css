@@ -105,5 +105,18 @@ section h2, .articles article{
 }
 
 #conhecimento{
-    background-color: #a8aeff;
+    background: url(/Mídias/espaco.png)no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#conhecimento .articles article{
+    border: solid;
+    border-color: #cbcfff;
+    backdrop-filter: blur(15px);
+    color: white;
+}
+
+#conhecimento h2{
+    color:white
 }
