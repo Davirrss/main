@@ -1,0 +1,61 @@
+header {
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px black;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+body{
+    background-image: url(/Código/midias/pexels-pixabay-33545.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navigation a {
+    border: 1px solid rgb(158, 173, 214);
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 10px;
+    transition: color 1s ease;
+}
+
+.navigation a:hover {
+    color: aqua;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div h1 {
+    color: slategrey;
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+
+p {
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px black;
+    color: darkseagreen;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+div h1,
+p {
+    padding: 10px;
+}
+
+div{
+    margin: 10%;
+}
