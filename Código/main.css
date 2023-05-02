@@ -1,64 +1,96 @@
-body {
-    font-family: sans-serif;
-    font-size: 16px;
+* {
     margin: 0;
-    background: url(/midias/foto_de_fundo.png)no-repeat;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* div {
+    width: 200px;
+    height: 200px;
+    border: 10px solid salmon;
+    margin: 50px;
+    padding: 30px;
+    font-size: 30px;
+} */
+div{
+    margin: 10%;
+}
+
+body{
+    background-image: url(/Código/midias/Lauren\ Marttila\ Photography.png);
     background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
+    
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    font-size: 24px;
+    margin: 0;
+}
+
+.navigation a {
+    border: 1px solid rgb(158, 173, 214);
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 10px;
 }
 
 .container {
-    max-width: 600px;
+    max-width: 500px;
     margin: 0 auto;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    backdrop-filter: blur 100px;
+    border-radius: 5px;
     padding: 20px;
-    margin-top: 50px;
+    border: 10px solid white;
 }
 
 form {
-    background-color: #f5f5f5;
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 label {
-    display: block;
-    margin-bottom: 10px;
-    color: #666;
+    margin-bottom: 5px;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="tel"] {
-    width: 95%;
     padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ddd;
     border-radius: 5px;
-    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
 }
 
 input[type="checkbox"] {
-    margin-right: 10px;
+    padding: 10px;
 }
 
 input[type="submit"] {
-    background-color: #4CAF50;
+    background-color: #333;
     color: #fff;
-    padding: 10px 20px;
     border: none;
+    padding: 10px 20px;
     border-radius: 5px;
-    font-size: 16px;
+    margin-top: 10px;
     cursor: pointer;
 }
 
 input[type="submit"]:hover {
-    background-color: #3e8e41;
-}
-
-label[for]:focus {
-    color: #4CAF50;
+    background-color: #838181;
 }
