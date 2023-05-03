@@ -1,0 +1,7 @@
+while (true) {
+    let num1 = prompt("Informe um valor")
+    for (let i = 1; i <= 10; i++){
+        let resultado = num1 * i;
+        console.log(num1 + " x " + i + " = " + resultado);
+    }
+}

@@ -57,8 +57,7 @@ header {
 .container {
     max-width: 500px;
     margin: 0 auto;
-    backdrop-filter: blur(10px);
-    border-radius: 5px;
+    backdrop-filter: blur(30px);
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
