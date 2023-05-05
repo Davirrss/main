@@ -1,0 +1,41 @@
+let num1 = prompt("Digite um valor:")
+let num2 = prompt("Digite um valor:")
+
+escolha = isNaN(num1, num2)
+
+if (escolha) {
+    
+    if (num1 > num2){
+        console.log("O seu maior valor é:" + num1)
+    }else if (num2 > num1){
+        console.log("O seu maior vlaor é:" + num2)
+        }
+        else {
+            console.log("Os dois valores são iguais.")
+        }
+}else{
+    alert("Informe apenas números.")
+}
+
+==========================================================
+
+let nota = []
+let resultado = 0, soma = 0
+
+for (let i = 0 ; i < 5 ; i++) {
+    nota[i] = prompt("Informe a " + (i+1) + "° nota:")
+    nota[i] = parseFloat(nota[i])
+    soma += nota[i]
+}
+
+resultado = soma / 5
+
+resultado = parseFloat(resultado)
+
+if (resultado >= 7 && resultado < 10) {
+    console.log("Aprovado.")
+} else if (resultado < 7) {
+    console.log("Reprovado.")
+} else {
+    console.log("Aprovado com distinção.")
+}
