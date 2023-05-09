@@ -1,0 +1,14 @@
+let num = [], number = []
+
+for (let i = 0 ; i < 3 ; i++) {
+    num[i] = prompt("Informe três valores " + (i + 1) + ":")
+    number[i] = parseInt(num[i])
+}
+
+number.sort(function(a, b) {
+    return b - a;
+});
+
+for (let i = 0 ; i < 3 ; i++) {
+    console.log(number[i])
+}

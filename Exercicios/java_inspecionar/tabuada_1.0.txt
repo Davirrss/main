@@ -1,0 +1,11 @@
+function tabuada(valor1, valor2) {
+  for (let i = 1; i <= valor2; i++) {
+    console.log(valor1 + " x " + i + " = " + (valor1 * i));
+  }
+}
+
+let valor1 = prompt("Digite o valor que você quer multiplicar:");
+
+let valor2 = prompt("Digite até onde o valor será multiplicado:");
+
+tabuada(valor1, valor2);

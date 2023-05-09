@@ -1,0 +1,10 @@
+let mes = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
+let cont = prompt("Informe um número:");
+let resul = parseInt(cont) - 1;
+
+for (let i = 0; i < mes.length; i++) {
+    if (i === resul) {
+        console.log("Seu mês é: " + mes[i]);
+        break;
+    }
+}
