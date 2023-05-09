@@ -1,0 +1,13 @@
+let letra = ""
+let vetor = ['a', 'e', 'i', 'o', 'u']
+
+letra = prompt("Informe uma letra:")
+
+for (let i = 0 ; i < 5 ; i++){
+    if (letra == vetor[i]) {
+        console.log("Isso é uma vogal")
+        break
+    }else {
+        console.log("Isso é uma consoante.")
+    }
+}
