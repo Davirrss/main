@@ -11,6 +11,6 @@ function compararNumeros() {
 
     const form = document.querySelector('form');
     form.addEventListener('submit', function(e) {
-    e.preventDefault(); // evita que o formulário seja enviado
+    e.preventDefault();
     compararNumeros();
     });
