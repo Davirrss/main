@@ -1,13 +1,44 @@
-h1 {
-    margin-top: 0;
-    margin-bottom: 20px; /* Adicione uma margem inferior */
-    font-size: 36px;
-    text-align: center;
-    color: #333;
+body {
+    background-image: url(/Código/midias/Lauren\ Marttila\ Photography.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-input {
-    padding-left: 100px;
-    text-align: center;
-    display: inline-block;
+.container {
+    margin-top: 18%;
+    margin-right: 25%;
+    margin-left: 25%;
+    padding: 20px;
+    background-color: rgba(140, 224, 252, 0.452);
+    border: 5px solid #833535;
+    border-radius: 50px;
+    box-shadow: 0 0 9px black;
 }
+
+.container label{
+    display: block;
+    margin-bottom: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container input{
+    border-radius: 50px;
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+#enviarnumero{
+    border: 3px solid rgb(37, 187, 0);
+    border-radius: 50px;
+    background-color: rgb(204, 243, 243);
+    cursor: pointer;
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: background-color 1s ease;
+}
+
+#enviarnumero:hover{
+    background-color: #00ff88;
+}
+

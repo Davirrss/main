@@ -4,13 +4,17 @@ function compararNumeros() {
     
     if (valorB > valorA) {
         alert("Valor B é maior que Valor A.");
+    } else if (valorA > valorB){
+        alert("Valor A é maior que Valor B.");
     } else {
-        alert("Valor A é maior ou igual a Valor B.");
+        alert("Os dois valores são iguais.")
     }
+    return [valorA, valorB];
 }
 
-    const form = document.querySelector('form');
-    form.addEventListener('submit', function(e) {
+const form = document.querySelector('form');
+form.addEventListener('submit', function(e) {
     e.preventDefault();
-    compararNumeros();
-    });
+    const [valorA, valorB] = compararNumeros();
+    form.reset();
+});
