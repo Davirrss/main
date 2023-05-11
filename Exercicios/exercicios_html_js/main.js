@@ -1,20 +1,32 @@
 function compararNumeros() {
     const valorA = parseFloat(document.getElementById("num1").value);
     const valorB = parseFloat(document.getElementById("num2").value);
-    
+
     if (valorB > valorA) {
-        alert("Valor B é maior que Valor A.");
+        resultadoDiv.textContent = "Valor B é maior que Valor A.";
     } else if (valorA > valorB){
-        alert("Valor A é maior que Valor B.");
+        resultadoDiv.textContent = "Valor A é maior que Valor B.";
     } else {
-        alert("Os dois valores são iguais.")
+        resultadoDiv.textContent = "Os dois valores são iguais.";
     }
-    return [valorA, valorB];
+
+    return [valorA, valorB, resultadoDiv];
 }
 
 const form = document.querySelector('form');
+const attempts = document.getElementById("tentativas");
+const resultadoDiv = document.getElementById("resultado");
+resultadoDiv.style.display = "none";
+attempts.style.display = "none";
+
+let tenta = 0;
+
 form.addEventListener('submit', function(e) {
     e.preventDefault();
-    const [valorA, valorB] = compararNumeros();
+    tenta += 1;
+    attempts.style.display = "block";
+    attempts.textContent = `Quantidade de vezes que você fez os testes nesses turnos: ${tenta}`;
+    const [valorA, valorB, resultadoDiv] = compararNumeros();
+    resultadoDiv.style.display = "block";
     form.reset();
 });

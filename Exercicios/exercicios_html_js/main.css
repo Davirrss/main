@@ -1,7 +1,11 @@
 body {
     background-image: url(/Código/midias/Lauren\ Marttila\ Photography.png);
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     background-size: cover;
+}
+.container h1{
+    color: darkblue;
+    text-shadow: 1px 2px 3px rgb(245, 4, 4);
 }
 
 .container {
@@ -22,10 +26,12 @@ body {
 }
 
 .container input{
+    outline: solid 3px green;
+    border: none;
     border-radius: 50px;
     display: block;
     margin-bottom: 20px;
-    padding: 10px;
+    padding: 8px;
 }
 
 #enviarnumero{
@@ -39,6 +45,19 @@ body {
 }
 
 #enviarnumero:hover{
+    /* font-size: 16px; */
     background-color: #00ff88;
+    /* border-radius: 15px; */
+}
+#resultado{
+    margin-bottom: 15px;
 }
 
+#resultado,
+#tentativas{
+    box-shadow: 10px 5px 4px black;
+    background-color: #ffffff;
+    border: solid 4px green;
+    padding: 4px;
+    border-radius: 12px;
+}
