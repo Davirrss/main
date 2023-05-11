@@ -37,7 +37,8 @@ body {
     padding: 8px;
 }
 
-#enviarnumero{
+#enviarnumero,
+#apagar{
     border: 3px solid rgb(37, 187, 0);
     border-radius: 50px;
     background-color: rgb(204, 243, 243);
@@ -47,7 +48,8 @@ body {
     transition: background-color 1s ease;
 }
 
-#enviarnumero:hover{
+#enviarnumero:hover,
+#apagar:hover{
     /* font-size: 16px; */
     background-color: #00ff88;
     /* border-radius: 15px; */
