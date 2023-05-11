@@ -7,11 +7,13 @@ body {
 
 
 .container h1{
+    text-align: center;  
     color: darkblue;
     text-shadow: 1px 2px 3px rgb(245, 4, 4);
 }
 
 .container {
+
     margin-top: 16%;
     margin-right: 25%;
     margin-left: 25%;
@@ -48,12 +50,18 @@ body {
     transition: background-color 1s ease;
 }
 
+#apagar{
+    padding: 7px;
+    margin-bottom: 10px;
+}
+
 #enviarnumero:hover,
 #apagar:hover{
     /* font-size: 16px; */
     background-color: #00ff88;
     /* border-radius: 15px; */
 }
+
 #resultado{
     margin-bottom: 15px;
 }
