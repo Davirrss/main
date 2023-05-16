@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: green;
+    font-size: 50px;
+    text-align: center;
+    box-shadow: 0 0 10px black;
+}
+
+#formulario{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+#formulario input{
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+    outline: solid 2px green;
+}
+
+#formulario label{
+    padding: 0 20px;
+    font-size: 20px;
+}
+
+#add {
+    padding: 10px;
+    outline: solid 3px rgb(0, 60, 255);
+    border: none;
+    border-radius: 15px;
+    margin-left: 20px;
+    background-color: rgb(107, 189, 148);
+    cursor: pointer;
+    transition: background-color 1s ease;
+    transition: outline 0.5s ease;
+}
+
+#add:hover{
+    background-color: rgb(107, 119, 189);
+    outline: solid 5px rgb(79, 196, 157);
+}
+
+#errovalidacao{
+    border-radius: 10px;
+    border: solid;
+    border-color: red;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.nome-contato,
+.numero-contato{
+    padding: 15px 10px;
+}
+
+#tabela {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    border: solid 5px green;
+    margin: 0px 600px;
+}
