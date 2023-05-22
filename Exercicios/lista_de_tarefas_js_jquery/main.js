@@ -1,23 +1,23 @@
-$(document).ready(function() {
+$(document).ready(function () {
     const badicionar = $("#adicionar");
-    badicionar.on('click', function(e) {
+    badicionar.on('click', function (e) {
         e.preventDefault();
         listatarefa();
     });
 
     const inputarefa = $('#inputarefa');
-    inputarefa.on('keypress', function(event) {
-    if (event.which === 13) {
-        event.preventDefault();
-        listatarefa();
-    }
+    inputarefa.on('keypress', function (event) {
+        if (event.which === 13) {
+            event.preventDefault();
+            listatarefa();
+        }
 
     });
     function listatarefa() {
         const nometarefa = $('#inputarefa').val().trim();
         if (nometarefa === '') {
             const errodiv = $('<div></div>').attr('id', 'erroaviso').text('Campo vazio');
-            $('#erroaviso').remove(); 
+            $('#erroaviso').remove();
             $('#inputarefa').after(errodiv);
         } else {
             $('#erroaviso').remove();
@@ -26,12 +26,12 @@ $(document).ready(function() {
             $('#inputarefa').val('');
             const bselecionado = $("<button></button>").attr('class', 'botaoselecionar').text('X');
             tarefalista.append(bselecionado);
-            bselecionado.on('click', function() {
+            bselecionado.on('click', function () {
                 const comparacao = $(this).parent();
                 if (comparacao.hasClass('concluido')) {
-                comparacao.removeClass('concluido');
+                    comparacao.removeClass('concluido');
                 } else {
-                comparacao.addClass('concluido');
+                    comparacao.addClass('concluido');
                 }
             });
         }
