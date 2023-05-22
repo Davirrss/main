@@ -1,6 +1,6 @@
 $(document).ready(function() {
-    var intervalo = 3000; // Intervalo de tempo entre as imagens em milissegundos
-    var animacaoVelocidade = 1000; // Velocidade da animação em milissegundos
+    var intervalo = 3000; 
+    var animacaoVelocidade = 1000;
 
     var $imagens = $('#imagens img');
     var quantidadeImagens = $imagens.length;
