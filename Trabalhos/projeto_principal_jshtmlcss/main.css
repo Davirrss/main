@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    overflow-x: hidden;
+}
+
+header{
+    position: fixed;
+    font-size: 40px;
+    padding: 15px;
+    width: 100vw;
+    display: flex;
+    background-color: black;
+    color: #fff;
+    justify-content: center;
+}
+
+footer{
+    color: #fff;
+    background-color: black;
+    padding: 20px
+}
+
+.marca{
+    padding: 5px;
+    border: solid 3px #fff;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-image: url(/Trabalhos/projeto_principal_jshtmlcss/imagens/interiorcasa.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+}
+
+.infoesquerda{
+    margin-left: 5%;
+    color: #000000;
+    backdrop-filter: blur(5px);;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: solid 3px rgba(0, 0, 0, 0.281) ;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.infoesquerda h1{
+    padding-bottom: 30px;
+}
+
+.infoesquerda,
+.logindireita{
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loginzona{
+    border: solid 3px rgba(0, 0, 0, 0.281) ;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    backdrop-filter: blur(5px);
+    font-family: monospace;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.nomezona{
+    padding-bottom: 20px;
+}
+
+.nomezona,
+.senhazona{
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.nomezona input,
+.senhazona input{
+    outline: none;
+    border: none;
+    background-color: rgb(0, 0, 0) ;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.loginzona h1{
+    padding-bottom: 20px;
+}
+
+#botaoentrar{
+    margin-top: 20px;
+    font-size: 20px;
+    padding: 20px;
+    background-color: #1ba727;
+    border: none;
+    border-radius: 20px;
+    transition: background-color 1s ease;
+}
+
+#botaoentrar:hover{
+    background-color: #8cff8c;
+}
+
+.errodiv{
+    position: absolute;
+    border-radius: 5px;
+    background-color: rgba(255, 13, 13, 0.432);
+    color: #fff;
+    top: 67%;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+.errodiv.temporemocao{
+    opacity: 0;
+}
+
+.bfecharnoti{
+    cursor: pointer;
+    border-radius: 50px;
+    border: none;
+    color: #fff;
+    background-color: rgb(255, 52, 52);
+    font-family: 'Flow Circular', cursive;
+    margin-left: 10px;
+    transition: background-color 1s ease;
+}
+
+.bfecharnoti:hover{
+    background-color: #640707;
+}
+
+.ativado{
+    font-family: 'Flow Circular', cursive;
+    width: 169px;
+    height: 15px;
+}
+
+#visivel{
+    margin-top: 10px;
+    border: none;
+    background-color: #00000083;
+    color: #fff;
+    transition: background-color 1s ease;
+    border-radius: 60px;
+}
+
+#visivel:hover{
+    background-color: #000000;
+}
+
+#nome,
+#senha{
+    text-decoration: none;
+}

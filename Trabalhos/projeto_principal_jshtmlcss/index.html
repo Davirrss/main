@@ -1,31 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Venda de imóveis</title>
-    <link rel="stylesheet" href="./main.css"/>
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Flow+Circular&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <div class="infoesquerda">
-        <h1>Sobre nós</h1>
-        <p>
-            Trabalho Trabalho Trabalho Trabalho Trabalho Trabalho 
-            Trabalho Trabalho Trabalho Trabalho Trabalho Trabalho 
-            Trabalho Trabalho Trabalho Trabalho Trabalho Trabalho 
-            Trabalho Trabalho Trabalho Trabalho Trabalho Trabalho 
-            Trabalho Trabalho Trabalho Trabalho Trabalho Trabalho  
-        </p>
+    <header>
+        <div class="marca">
+            Imóveis dos sonhos
+        </div>
+    </header>
+    <div class="container">
+        <div class="infoesquerda">
+            <h1>Sobre nós</h1>
+            <p>
+                Somos uma empresa apaixonada por imóveis e dedicada a proporcionar uma experiência excepcional aos
+                nossos clientes. Com anos de experiência no mercado imobiliário, desenvolvemos uma reputação sólida e
+                confiável, construída sobre os pilares da transparência, integridade e comprometimento com a satisfação
+                do cliente.
+            </p>
+        </div>
         <div class="logindireita">
-            <h1>Zona de login</h1>
-            <label for="nome">Nome de usuário</label>
-            <input id="nome" placeholder="Informe aqui">
-            <label for="senha">Informe sua senha</label>
-            <input id="senha" placeholder="Informe aqui">
-            <button id="botaoentrar">Entrar</button>
+            <div class="loginzona">
+                <h1>Zona de login</h1>
+                <div class="nomezona">
+                    <label for="nome">Nome de usuário</label>
+                    <input id="nome" spellcheck="false">
+                </div>
+                <div class="senhazona">
+                    <label for="senha">Informe sua senha</label>
+                    <input id="senha" spellcheck="false">
+                    <button id="visivel">X</button>
+                </div>
+                <button id="botaoentrar">Entrar</button>
+            </div>
         </div>
     </div>
+    <footer>
+        <div class="direitos">
+            Todos os direitos reservado para Davi
+        </div>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="main.js"></script>
 </body>
