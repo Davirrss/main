@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+}
+
+header {
+    height: 10vh;
+    width: 100vw;
+    background-color: coral;
+}
+
+.topo {
+    display: flex;
+}
+
+.nomediv {
+    margin-left: auto;
+}

@@ -1,9 +1,9 @@
-*{
+* {
     margin: 0;
     overflow-x: hidden;
 }
 
-header{
+header {
     position: fixed;
     font-size: 40px;
     padding: 15px;
@@ -12,21 +12,21 @@ header{
     background-color: black;
     color: #fff;
     justify-content: center;
-}
+}   
 
-footer{
+footer {
     color: #fff;
     background-color: black;
     padding: 20px
 }
 
-.marca{
+.marca {
     padding: 5px;
     border: solid 3px #fff;
     font-family: 'Signika Negative', sans-serif;
 }
 
-.container{
+.container {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -37,22 +37,23 @@ footer{
     align-items: center;
 }
 
-.infoesquerda{
+.infoesquerda {
     margin-left: 5%;
     color: #000000;
-    backdrop-filter: blur(5px);;
+    backdrop-filter: blur(5px);
+    ;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    border: solid 3px rgba(0, 0, 0, 0.281) ;
+    border: solid 3px rgba(0, 0, 0, 0.281);
     padding: 20px;
     border-radius: 10px;
 }
 
-.infoesquerda h1{
+.infoesquerda h1 {
     padding-bottom: 30px;
 }
 
 .infoesquerda,
-.logindireita{
+.logindireita {
     width: 50vw;
     display: flex;
     justify-content: center;
@@ -60,8 +61,8 @@ footer{
     flex-direction: column;
 }
 
-.loginzona{
-    border: solid 3px rgba(0, 0, 0, 0.281) ;
+.loginzona {
+    border: solid 3px rgba(0, 0, 0, 0.281);
     width: 60%;
     display: flex;
     justify-content: center;
@@ -74,12 +75,12 @@ footer{
     border-radius: 10px;
 }
 
-.nomezona{
+.nomezona {
     padding-bottom: 20px;
 }
 
 .nomezona,
-.senhazona{
+.senhazona {
     flex-direction: column;
     display: flex;
     align-items: flex-start;
@@ -87,20 +88,20 @@ footer{
 }
 
 .nomezona input,
-.senhazona input{
+.senhazona input {
     outline: none;
     border: none;
-    background-color: rgb(0, 0, 0) ;
+    background-color: rgb(0, 0, 0);
     color: #fff;
     padding: 10px;
     border-radius: 10px;
 }
 
-.loginzona h1{
+.loginzona h1 {
     padding-bottom: 20px;
 }
 
-#botaoentrar{
+#botaoentrar {
     margin-top: 20px;
     font-size: 20px;
     padding: 20px;
@@ -110,11 +111,11 @@ footer{
     transition: background-color 1s ease;
 }
 
-#botaoentrar:hover{
+#botaoentrar:hover {
     background-color: #8cff8c;
 }
 
-.errodiv{
+.errodiv {
     position: absolute;
     border-radius: 5px;
     background-color: rgba(255, 13, 13, 0.432);
@@ -128,11 +129,11 @@ footer{
     transition: opacity 1s ease;
 }
 
-.errodiv.temporemocao{
+.errodiv.temporemocao {
     opacity: 0;
 }
 
-.bfecharnoti{
+.bfecharnoti {
     cursor: pointer;
     border-radius: 50px;
     border: none;
@@ -143,30 +144,48 @@ footer{
     transition: background-color 1s ease;
 }
 
-.bfecharnoti:hover{
+.bfecharnoti:hover {
     background-color: #640707;
 }
 
-.ativado{
+.ativado {
     font-family: 'Flow Circular', cursive;
     width: 169px;
     height: 15px;
 }
 
-#visivel{
+#visivel {
     margin-top: 10px;
     border: none;
-    background-color: #00000083;
-    color: #fff;
+    outline: none;
+    background-color: #fff;
     transition: background-color 1s ease;
     border-radius: 60px;
 }
 
-#visivel:hover{
-    background-color: #000000;
+#visivel:hover {
+    background-color: #ffffff6e;
+}
+
+#visivel img {
+    margin-top: 3px;
+    max-width: 20px;
+    max-height: 20px;
 }
 
 #nome,
-#senha{
+#senha {
     text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(90, 90, 90);
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
 }

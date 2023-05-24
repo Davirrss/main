@@ -55,9 +55,9 @@ $(document).ready(function () {
             resetedosvalores();
             botaofechar(notiuser);
             msgtemp(notiuser, 10000);
-        } else {
+        } else { 
+            window.location.href = "/Trabalhos/projeto_principal_jshtmlcss/interacao.html?usuario=" + nameuser;
             resetedosvalores();
-            window.location.href = "/Trabalhos/projeto_principal_jshtmlcss/interacao.html"
         }
     });
 
