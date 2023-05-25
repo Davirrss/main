@@ -11,5 +11,13 @@ $(document).ready(function () {
         const inputnome = $("<input>").addClass("inputnome");
         $(caixa).append(inputnome);
         $(".container").append(caixa);
+        const inputimagem = $('<input type="file"> ')
+        const imagem = $('<img src="choose.png">')
+        $(caixa).append(imagem, inputimagem)
+        input.onchange = (e) => {
+            if (input.files[0])
+                img.src = URL.createObjectURL(input.files[0]);
+            
+        };
     });
 });

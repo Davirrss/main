@@ -5,14 +5,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" type="text/css" href="slick/slick.css" />
-  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
-  <title>SENAC Motors</title>
 
+  <link rel="stylesheet" href="./main.css" />
+
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+  <title>SENAC Motors</title>
 </head>
 
 <body>
@@ -43,168 +45,275 @@
         </ul>
       </div>
     </nav>
-  </div>
+    </div>
   </header>
   <div id="carrossel_imagens">
-    <img src="/Cod_Fonte_Aula/site_motors/carros/carroandando.png" alt="Porsche Carrera">
-    <img src="/Cod_Fonte_Aula/site_motors/carros/carrodaxiaomi.png" alt="Carro da BMW">
-    <img src="/Cod_Fonte_Aula/site_motors/carros/carropequeno.png" alt="Ford GT">
+    <img src="./images/slide1.png" alt="Porsche Carrera" />
+    <img src="./images/slide2.png" alt="Carro BMW" />
+    <img src="./images/slide3.png" alt="Ford Gt" />
   </div>
-  <section id="sobre_a_loja"></section>
+  <section id="sobre_a_loja">
     <div class="container container_flex">
-      <img src="/Cod_Fonte_Aula/site_motors/carros/modelos.png" alt="fachada loja" />
-      <div id="lojainfo">
+      <img src="./images/loja.jpg" alt="Fachada loja" />
+      <div class="texto">
         <h2>Sobre a loja</h2>
         <p>
-          rem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-          industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-          into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-          release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-          software like Aldus PageMaker including versions of Lorem Ipsu
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio inventore eum, explicabo asperiores labore ad,
+          animi at commodi rerum quisquam id dicta reprehenderit nihil quia tenetur sint consectetur nemo debitis?
         </p>
         <p>
-          rem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-          industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-          into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-          release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-          software like Aldus PageMaker including versions of Lorem Ipsu
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio inventore eum, explicabo asperiores labore ad,
+          animi at commodi rerum quisquam id dicta reprehenderit nihil quia tenetur sint consectetur nemo debitis?
         </p>
       </div>
     </div>
   </section>
-  <section>
+  <section id="destaque">
     <div class="container">
-      <h2>Em Destaque</h2>
+      <h2>Em destaque</h2>
       <ul class="container_flex lista_veiculos">
         <li>
-          <h3>Carro BMW</h3>
-          <img src="/Cod_Fonte_Aula/site_motors/carros/ferrariescura.png" alt="Carro escuro" />
+          <h3>MERCEDES AMG GTR 2017</h3>
+          <img src="./images/mercedes_amg_gtr.png" alt="Carro mercedes_amg_gtr" />
           <p>
-            Modelo XRT-129, 4 assentos, manual
+            Cor: Verde
+            Lugares: 2
+            Transmissão: Automática de 7 velocidades
+            Estilo da carroceria: Coupe de 2 portas
+            Layout: Motor dianteiro
+            Motor: V8 4 ltr Twin Turbo Intercooler
+            Potência: 577 cv
+            0-100 km/h: 3,6 segundos
+            Peso: 1645kg
           </p>
-          <strong>R$ 1.250.000,00</strong>
-          <button type="button">Tenho Interesse</button>
+          <strong>R$ 1.740.000</strong>
+          <button type="button">Tenho interesse</button>
         </li>
-
         <li class="item_central">
-          <h3>Carro Italico</h3>
-          <img src="/Cod_Fonte_Aula/site_motors/carros/carroandando.png" alt="Porsche" />
+          <h3>PORSCHE TAYCAN 4S ELÉTRICO 2020/2021</h3>
+          <img src="./images/porsche-taycan-4s-eletrico.png" alt="Carro porsche-taycan-4s-eletrico" />
           <p>
-            Modelo KN-901,suspenção adaptável, manual
+            Veículo Full de opcionais, Teto Panorâmico,
+            Rodas Mission e Design aro 21, Pacote Sport Chrono,
+            bancos 18 vias, som Bose, interior Uva.
+            Potência combinada de 530 cv. Laudo aprovado,
+            possui manual e chave reserva.
           </p>
-          <strong>R$ 75.000,00</strong>
-          <button type="button">Tenho Interesse</button>
+          <strong>R$ 778.800,00</strong>
+          <button type="button">Tenho interesse</button>
         </li>
-
         <li>
-          <h3>Carro BMW</h3>
-          <img src="/Exercicios/carrossel_de_imagens/casadocampo3.png" alt="BMW" />
+          <h3>PORSCHE MACAN
+            2.0 TURBO GASOLINA PDK 2022/2022</h3>
+          <img src="./images/porsche-macan-2.0-turbo-gasolina-pdk.png" alt="Carro porsche-macan-2.0" />
           <p>
-            Cambio Automático, 4 Portas, Vidros e travas elétricas
+            Opcionais: Pacote de couro estendido em Preto,
+            Bege Mojave/Ponteiras de escapamento Esportivas em
+            Preto/Direção Assistida Plus/Cubos de com escudo Porsche colorido/Rodas
+            21" RS Spyder Design/Luzes traseiras escurecidas/Bancos esportivos
+            adaptáveis de 18 vias/Projeção de logo PORSCHE iluminado nas portas.
+            Na cor: Papaia Metálico.
           </p>
-          <strong>R$ 75.000,00</strong>
-          <button type="button">Tenho Interesse</button>
+          <strong>R$ 549.000,00</strong>
+          <button type="button">Tenho interesse</button>
         </li>
-
         <li>
-          <h3>Carro BMW</h3>
-          <img src="/Exercicios/carrossel_de_imagens/casadocampo3.png" alt="BMW" />
+          <h3>TESLA MODEL 3
+            ELÉTRICO AWD LONGE RANGE PERFORMANCE</h3>
+          <img src="./images/tesla-model-3-eletrico.png" alt="Carro tesla-model-3-eletrico" />
           <p>
-            Cambio Automático, 4 Portas, Vidros e travas elétricas
+            Tesla Model 3 Performance á pronta entrega.
+            Na cor cinza com o interior em couro preto e detalhes em madeira.
+            De 0 a 100km/h em 3,1s. Tração integral. Rodas modelo Überturbine.
+            Spoiler traseiro em fibra de carbono.
+            Aceitamos seu seminovo na troca e fazemos excelente avaliação.
+            Outros Opcionais: Porta-copos, Farol de neblina, Direção Elétrica,
+            Comando de áudio no volante, Assistente de Partida em Rampa,
+            Banco bi-partido, Controle de estabilidade,
+            Distribuição eletrônica de frenagem.
           </p>
-          <strong>R$ 75.000,00</strong>
-          <button type="button">Tenho Interesse</button>
+          <strong>R$ 729.900,00</strong>
+          <button type="button">Tenho interesse</button>
         </li>
-
         <li class="item_central">
-          <h3>Carro BMW</h3>
-          <img src="/Exercicios/carrossel_de_imagens/casadocampo3.png" alt="BMW" />
+          <h3>BMW M8
+            4.4 V8 TWINPOWER GASOLINA XDRIVE GRAN COUPÉ COMPETITION
+            FIRST EDITION STEPTRONIC 2020/2021
+          </h3>
+          <img src="./images/bmw-m8.png" alt="Carro bmw-m8" />
           <p>
-            Cambio Automático, 4 Portas, Vidros e travas elétricas
+            Cor Aurora Diamant Green com acabamento externo Gold Bronze,
+            cambio ZF de 8 marchas, tração integral, modos Sport, Comfort,
+            Eco Pro e Adaptive, controle de tração e estabilidade, Cruise Control,
+            interior preto e caramelo com iluminação configurável e acabamento em Black Piano
+            e alumínio, volante multifuncional com aquecimento, acabamento externo
+            preto brilhante e Gold Bronze, edição especial First Edition com pintura
+            e acabamento exclusivos, apenas 400 unidades produzidas no mundo.
+            Outros Opcionais: Direção Elétrica, Comando de áudio no volante,
+            Controle de estabilidade, Distribuição eletrônica de frenagem, Kit Multimídia,
+            Pára-choques na cor do veículo.
           </p>
-          <strong>R$ 75.000,00</strong>
-          <button type="button">Tenho Interesse</button>
+          <strong>R$ 990.000,00</strong>
+          <button type="button">Tenho interesse</button>
         </li>
       </ul>
     </div>
   </section>
-  <section class="promocao">
+
+  <section id="promocao">
     <div class="container">
-      <h2>Em Promoção</h2>
+      <h2>Promoções</h2>
       <ul class="container_flex lista_veiculos">
         <li>
-          <h3>Carro BMW</h3>
-          <img src="/Exercicios/carrossel_de_imagens/casadocampo3.png" alt="BMW" />
+          <h3>LAMBORGHINI URUS
+            4.0 V8 TURBO GASOLINA LP650-4 AUTOMÁTICO 2019/2019 </h3>
+          <img src="./images/lamborghini-urus.png" alt="Carro lamborghini-urus" />
           <p>
-            Cambio Automático, 4 Portas, Vidros e travas elétricas
+            Cambio automático de 8 marchas, tração integral, seletor Anima com modos Strada,
+            Sport, Corsa e Neve, modo personalizado EGO, interior em couro preto e vermelho com costuras vermelhas,
+            iluminação ambiente e acabamento em Black Piano e alumínio escovado, volante multifuncional em couro e
+            Alcantara com costuras vermelhas,
+            painel de instrumentos em TFT configurável, ar condicionado digital Quad Zone, porta malas elétrico,
+            blindado CART com vidros AGP iB33
+            (inclusive teto solar panorâmico). Outros Opcionais: Farol de neblina, Comando de áudio no volante, Controle
+            de estabilidade, Distribuição eletrônica de frenagem,
+            Kit Multimídia, Pára-choques na cor do veículo.
           </p>
-          <div class="price">
-            <del>R$ 100.000,00</del>
-            <strong>R$ 75.000,00</strong>
-            <button type="button">Tenho Interesse</button>
+          <div class="preco">
+            <del>R$ 4.200.000,00</del>
+            <strong>R$ 3.100.000,00</strong>
           </div>
+          <button type="button">Tenho interesse</button>
         </li>
-
         <li class="item_central">
-          <h3>Carro BMW</h3>
-          <img src="/Exercicios/carrossel_de_imagens/casadocampo3.png" alt="BMW" />
+          <h3>LAMBORGHINI AVENTADOR
+            6.5 V12 GASOLINA LP 770-4 SVJ ROADSTER ISR 2021/2021</h3>
+          <img src="./images/lamborghini-aventador.png" alt="Carro lamborghini-aventador" />
           <p>
-            Cambio Automático, 4 Portas, Vidros e travas elétricas
+            Cor Ad Personam Blu Emera, Motor V12 aspirado com 770cv, Interior Nero Ancantara com costuras em Azul,
+            Pacote interno em carbono, Bancos Comfort em carbono com ajuste elétrico, Lamborghini Shields bordado nos
+            encostos de cabeça dos bancos,
+            Lift System, Escapamento Innotech IPE Full em titânio, Capota em carbono facilmente removível manualmente,
+            Aerofólio ALA (Aerodinâmica Lamborghini Ativa) em carbono,
+            Volante em Alcantara, Paddle Shift em carbono, Portas com abertura para cima, Sistema de som Surround da
+            Sensonum, Rodas Leirion forjadas na cor Cinza Fosco,
+            Freios em Ceramic-carbon com pinças de freio na cor amarela.
           </p>
-          <div class="price">
-            <del>R$ 100.000,00</del>
-            <strong>R$ 75.000,00</strong>
-            <button type="button">Tenho Interesse</button>
+          <div class="preco">
+            <del>R$ 10.900.000,00</del>
+            <strong>R$ 7.457.104,00</strong>
           </div>
+          <button type="button">Tenho interesse</button>
         </li>
-
         <li>
-          <h3>Carro BMW</h3>
-          <img src="/Exercicios/carrossel_de_imagens/casadocampo3.png" alt="BMW" />
+          <h3>BMW Z4
+            2.0 16V TURBO GASOLINA SDRIVE20I AUTOMÁTICO 2015/2016</h3>
+          <img src="./images/carro-bmw.png" alt="Carro BMW Z4" />
           <p>
-            Cambio Automático, 4 Portas, Vidros e travas elétricas
+            IMPECÁVEL 2 DONO , SEM DETALHES, BAIXO KM
+            Nos reservamos o direito a erros de digitação.
+            Financiamos com as melhores Taxas.
+            Parcelamos no cartões Visa e Mastercard.
           </p>
-          <div class="price">
-            <del>R$ 100.000,00</del>
-            <strong>R$ 75.000,00</strong>
-            <button type="button">Tenho Interesse</button>
+          <div class="preco">
+            <del>R$ 300.000,00</del>
+            <strong>R$ 265.900,00</strong>
           </div>
+          <button type="button">Tenho interesse</button>
         </li>
-
         <li>
-          <h3>Carro BMW</h3>
-          <img src="/Exercicios/carrossel_de_imagens/casadocampo3.png" alt="BMW" />
+          <h3>VOLKSWAGEN FUSCA 1300L 1975</h3>
+          <img src="./images/fusca.png" alt="Carro fusca 1975" />
           <p>
-            Cambio Automático, 4 Portas, Vidros e travas elétricas
+            MOTOR 1300 NOVO
+            MECÂNICA REVISADA
+            INTERNA MONOCROMÁTICA MARROM
+            APARELHO DE SOM PIONEER USB
+            PNEUS BONS
+            ACEITO TROCAS - Mais opcionais:Som USB
           </p>
-          <div class="price">
-            <del>R$ 100.000,00</del>
-            <strong>R$ 75.000,00</strong>
-            <button type="button">Tenho Interesse</button>
+          <div class="preco">
+            <del>R$ 30.000,00</del>
+            <strong>R$ 25.500,00</strong>
           </div>
+          <button type="button">Tenho interesse</button>
         </li>
-
         <li class="item_central">
-          <h3>Carro BMW</h3>
-          <img src="/Exercicios/carrossel_de_imagens/casadocampo3.png" alt="BMW" />
+          <h3>Bmw K 1300 S 2010</h3>
+          <img src="./images/moto-bmw.png" alt="Moto Bmw K 1300 s 2010" />
           <p>
-            Cambio Automático, 4 Portas, Vidros e travas elétricas
+            Ficha tecnica - Motor de 1300 cilindradas - 4 cilindros em linha, - 175 cv - 14.2
+            kgfm de torque - Cambio manual de 6 velocidades - Freios a disco -
+            Injecao eletronica - Eixo Carda - Quadro em Aluminio - Peso 228 kg -
+            Tanque de 19 litros
           </p>
-          <div class="price">
-            <del>R$ 100.000,00</del>
-            <strong>R$ 75.000,00</strong>
-            <button type="button">Tenho Interesse</button>
+          <div class="preco">
+            <del>R$ 80.000,00</del>
+            <strong>R$ 55.900,00</strong>
           </div>
+          <button type="button">Tenho interesse</button>
         </li>
       </ul>
     </div>
   </section>
+  <section id="formulario">
+    <div class="container">
+      <h2>Entre em contato:</h2>
+      <form>
+        <div class="form_campo">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome">
+        </div>
+        <div class="form_campo">
+          <label for="telefone">Telefone:</label>
+          <input type="tel" id="telefone" name="telefone">
+        </div>
+        <div class="form_campo">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email">
+        </div>
+        <div class="form_campo">
+          <label for="veiculo_interesse">Veículo:</label>
+          <input type="text" id="veiculo_interesse" name="veiculo_interesse">
+        </div>
+        <div class="form_campo">
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem"></textarea>
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+  <footer>
+    <div class="container container_flex">
+      <p>
+        2023 &copy; SENAC Motors - Todos os direitos reservados.
+      </p>
+      <ul class="container_flex">
+        <li>
+          <a href="#">
+            <img src="./icones/facebook.png" alt="Facebook logo" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./icones/instagram.png" alt="instagram logo" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./icones/youtube.png" alt="Youtube logo" />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script type="text/javascript" src="slick/slick.min.js"></script>
+  <script src="/Cod_Fonte_Aula/site_motors/js/jquery.mask.min.js"></script>
+  <script src="/Cod_Fonte_Aula/site_motors/js/jquery.validate.min.js"></script>
+  <script src="/Cod_Fonte_Aula/site_motors/js/messages_pt_BR.min.js"></script>
   <script src="main.js"></script>
 </body>
 
