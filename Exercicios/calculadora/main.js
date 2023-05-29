@@ -3,54 +3,27 @@ $(document).ready(function () {
     let cravar = 0
     let numerostringantes = ''
     let numerostringdepois = ''
+    let decimalencontrado = false;
 
 
     $('#resultado').click(function () {
         for (let i = 0; i < valor.length; i++) {
             if (valor[i] === "divisao") {
                 cravar = i;
-                for (let j = cravar - 1; j >= 0; j--) {
-                    numerostringantes = valor[j] + numerostringantes;
-                }
-                for (let k = cravar + 1; k < valor.length; k++) {
-                    numerostringdepois += valor[k];
-                }
-                let resultado = parseFloat(numerostringantes) / parseFloat(numerostringdepois);
-                $('.resultado2').text(resultado);
+                config(cravar, "dividir");
                 break;
             }else if (valor[i] === "multipicacao") {
                 cravar = i;
-                for (let j = cravar - 1; j >= 0; j--) {
-                    numerostringantes = valor[j] + numerostringantes;
-                }
-                for (let k = cravar + 1; k < valor.length; k++) {
-                    numerostringdepois += valor[k];
-                }
-                let resultado = parseFloat(numerostringantes) * parseFloat(numerostringdepois);
-                $('.resultado2').text(resultado);
+                config(cravar, "vezes");
                 break;
             }else if (valor[i] === "subtracao") {
                 cravar = i;
-                for (let j = cravar - 1; j >= 0; j--) {
-                    numerostringantes = valor[j] + numerostringantes;
-                }
-                for (let k = cravar + 1; k < valor.length; k++) {
-                    numerostringdepois += valor[k];
-                }
-                let resultado = parseFloat(numerostringantes) - parseFloat(numerostringdepois);
-                $('.resultado2').text(resultado);
+                config(cravar, "menos");
                 break;
             }else if (valor[i] === "adicao") {
                 cravar = i;
-                for (let j = cravar - 1; j >= 0; j--) {
-                    numerostringantes = valor[j] + numerostringantes;
-                }
-                for (let k = cravar + 1; k < valor.length; k++) {
-                    numerostringdepois += valor[k];
-                }
-                let resultado = parseFloat(numerostringantes) + parseFloat(numerostringdepois);
-                $('.resultado2').text(resultado);
-                break;
+                config(cravar, "mais");
+                break
             }
         }
     });
@@ -140,5 +113,45 @@ $(document).ready(function () {
         valor.push(9);
         $('.ixibicao').append(9);
     });
+
+    function config(lock, operador) {
+        for (let j = lock - 1; j >= 0; j--) {
+            if (valor[j] === "decimal") {
+                decimalencontrado = true;
+            } else {
+                numerostringantes = valor[j] + numerostringantes;
+            }
+            if (decimalencontrado) {
+                numerostringantes = "." + numerostringantes;
+                decimalencontrado = false;
+            }
+        }
+        for (let k = lock + 1; k < valor.length; k++) {
+            if (valor[k] === "decimal") {
+                decimalencontrado = true;
+            } else {
+                numerostringdepois += valor[k];
+            }
+            if (decimalencontrado) {
+                numerostringdepois += ".";
+                decimalencontrado = false;
+            }
+        }
+
+        if (operador === "mais") {
+            let resultado = parseFloat(numerostringantes) + parseFloat(numerostringdepois);
+            $('.resultado2').text(resultado);
+        } else if (operador === "menos") {
+            let resultado = parseFloat(numerostringantes) - parseFloat(numerostringdepois);
+            $('.resultado2').text(resultado);
+        } else if (operador === "vezes") {
+            let resultado = parseFloat(numerostringantes) * parseFloat(numerostringdepois);
+            $('.resultado2').text(resultado);
+        } else if (operador === "dividir") {
+            let resultado = parseFloat(numerostringantes) / parseFloat(numerostringdepois);
+            $('.resultado2').text(resultado);
+        }
+
+    }
 
 })
