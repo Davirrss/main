@@ -1,25 +1,19 @@
 * {
     margin: 0;
 }
+
 header {
     height: 10vh;
     width: 100vw;
     background-color: rgb(0, 0, 0);
-    position: fixed;
+    /* position: fixed; */
     top: 0;
 }
 
 .marca {
-    margin-top: 10px;
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-left: 15%;
     font-size: 40px;
-    padding: 15px;
-    background-color: black;
     color: #fff;
-    font-family: 'Signika Negative', sans-serif;
 }
 
 .topo {
@@ -39,11 +33,12 @@ header {
     color: rgb(255, 0, 0);
     text-decoration: none;
     font-size: 30px;
-    margin-right: 20px; 
+    margin-right: 20px;
     transition: color 1s ease, border-bottom 0.5s ease;
     border-bottom: 2px solid transparent;
     box-sizing: border-box;
 }
+
 .link a:hover {
     color: rgb(223, 110, 110);
     border-bottom: 2px solid rgb(223, 110, 110);
@@ -59,7 +54,7 @@ header {
     border: solid 3px #fff;
 }
 
-.userconfig{    
+.userconfig {
     border-radius: 10px;
     border: solid 2px yellow;
     font-size: 20px;
@@ -72,7 +67,7 @@ header {
     top: 60px;
 }
 
-.userconfig > a{
+.userconfig>a {
     font-family: 'Signika Negative', sans-serif;
     text-decoration: none;
     padding: 10px;
@@ -80,16 +75,27 @@ header {
     transition: color 0.5s ease;
 }
 
-.userconfig > a:hover{
+.userconfig>a:hover {
     color: rgb(223, 110, 110);
-
 }
 
-.nomediv{
+.nomediv {
     background-color: aliceblue;
 }
 
-#bmostrar{
+.caixa_apresentacao {
+    display: flex;
+    margin-top: 10%;
+    justify-content: center;
+}
+
+.apresentacao>h1 {
+    scale: 1.5;
+    -webkit-animation: shadow-pop-br 1s forwards;
+    animation: shadow-pop-br 1s forwards;
+}
+
+#bmostrar {
     height: 30px;
     width: 30px;
     background-color: rgb(255, 255, 255);
@@ -98,7 +104,45 @@ header {
     outline: none;
 }
 
-#bmostrar img{
+#bmostrar img {
     max-width: 20px;
     max-height: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .marca {
+        font-size: 15px;
+    }
+}
+
+@-webkit-keyframes shadow-pop-br {
+    0% {
+        -webkit-box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+        box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+        -webkit-transform: translateX(0) translateY(0);
+        transform: translateX(0) translateY(0);
+    }
+
+    100% {
+        -webkit-box-shadow: 1px 1px #3e3e3e, 2px 2px #3e3e3e, 3px 3px #3e3e3e, 4px 4px #3e3e3e, 5px 5px #3e3e3e, 6px 6px #3e3e3e, 7px 7px #3e3e3e, 8px 8px #3e3e3e;
+        box-shadow: 1px 1px #3e3e3e, 2px 2px #3e3e3e, 3px 3px #3e3e3e, 4px 4px #3e3e3e, 5px 5px #3e3e3e, 6px 6px #3e3e3e, 7px 7px #3e3e3e, 8px 8px #3e3e3e;
+        -webkit-transform: translateX(-8px) translateY(-8px);
+        transform: translateX(-8px) translateY(-8px);
+    }
+}
+
+@keyframes shadow-pop-br {
+    0% {
+        -webkit-box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+        box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+        -webkit-transform: translateX(0) translateY(0);
+        transform: translateX(0) translateY(0);
+    }
+
+    100% {
+        -webkit-box-shadow: 1px 1px #3e3e3e, 2px 2px #3e3e3e, 3px 3px #3e3e3e, 4px 4px #3e3e3e, 5px 5px #3e3e3e, 6px 6px #3e3e3e, 7px 7px #3e3e3e, 8px 8px #3e3e3e;
+        box-shadow: 1px 1px #3e3e3e, 2px 2px #3e3e3e, 3px 3px #3e3e3e, 4px 4px #3e3e3e, 5px 5px #3e3e3e, 6px 6px #3e3e3e, 7px 7px #3e3e3e, 8px 8px #3e3e3e;
+        -webkit-transform: translateX(-8px) translateY(-8px);
+        transform: translateX(-8px) translateY(-8px);
+    }
 }
