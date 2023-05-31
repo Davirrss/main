@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+}
+
+body {
+    width: 100%;
+}
+
+header {
+    display: flex;
+    height: 10vh;
+    background-color: black;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5% 0 5%;
+}
+
+.links nav a {
+    font-family: 'Signika Negative', sans-serif;
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    font-size: 30px;
+    transition: color 1s ease, border-bottom 0.5s ease;
+    border-bottom: 2px solid transparent;
+    margin-right: 20px;
+}
+
+.infouser {
+    color: aliceblue;
+}

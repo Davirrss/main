@@ -87,8 +87,9 @@ header {
 }
 
 .apresentacao>h1 {
+    font-family: monospace;
     color: #fff;
-    transform: scale(1.5);  
+    transform: scale(1.5); 
     -webkit-animation: tracking-in-contract-bck-bottom 1s linear forwards;
     animation: tracking-in-contract-bck-bottom 1s linear forwards;
 }
