@@ -56,7 +56,7 @@ $(document).ready(function () {
             botaofechar(notiuser);
             msgtemp(notiuser, 10000);
         } else { 
-            window.location.href = "/Trabalhos/projeto_principal_jshtmlcss/interacao.html?usuario=" + nameuser;
+            window.location.href = "interacao.html?usuario=" + nameuser;
             resetedosvalores();
         }
     });
@@ -90,7 +90,7 @@ $(document).ready(function () {
         const bnotiuser = $("<button></button>").addClass("bfecharnoti").text("X");
         notificacao.append(bnotiuser);
         bnotiuser.on('click', function () {
-            notificacao.addClass('temporemocao')
+            notificacao.addClass('temporemocao');
             notificacao.on('transitionend', function() {
                 notificacao.remove();
             })
