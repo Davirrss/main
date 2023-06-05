@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib/cdn.jsdelivr.net_npm_bootstrap@5.3.0_dist_css_bootstrap.min.css">
+    <title>Carrossel</title>
+    <style>
+        .carousel-item {
+            max-height: 340px;
+        }
+
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="carousel-ex" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div data-bs-interval="2000" class="carousel-item active">
+                    <img src="https://cdn.pixabay.com/photo/2017/01/20/00/30/maldives-1993704_1280.jpg">
+                    <div class="carousel-caption">
+                        <h5 class="text-dark">Lago de Dubai</h5>
+                    </div>
+                </div>
+                <div data-bs-interval="2000" class="carousel-item ">
+                    <img src="https://cdn.pixabay.com/photo/2016/11/23/13/48/beach-1852945_1280.jpg">
+                    <div class="carousel-caption">
+                        <h5 class="text-dark">Céu azul</h5>
+                    </div>
+                </div>
+                <div data-bs-interval="2000" class="carousel-item ">
+                    <img src="https://cdn.pixabay.com/photo/2014/08/15/11/29/beach-418742_1280.jpg">
+                    <div class="carousel-caption">
+                        <h5 class="text-dark">Montanhas do mar</h5>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" data-bs-target="#carousel-ex" data-bs-slide="prev" type="button">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" data-bs-target="#carousel-ex" data-bs-slide="next" type="button">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel-ex" class="active" data-bs-slide-to="0"></button>
+                <button type="button" data-bs-target="#carousel-ex" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carousel-ex" data-bs-slide-to="2"></button>
+            </div>
+        </div>
+    </div>
+    <script src="lib/cdn.jsdelivr.net_npm_bootstrap@5.3.0_dist_js_bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

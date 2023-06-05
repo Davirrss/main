@@ -17,7 +17,7 @@ $(document).ready(function () {
         if (idiv == 'bmoeda') {
             var divbasemoeda = $('<div>').addClass('divbasemoeda');
             var divconteudomoeda = $('<div>').addClass('divconteudomoeda');
-            divconteudomoeda.append('<label for="moedainput">Informe o valor que seja depositar</label>', '<input name="moedainput" id="moedainputid">', '<button id="depositar">Deposita</button>', '<button id="cancelar">Cancelar</button>');
+            divconteudomoeda.append('<label for="moedainput">Informe o valor que deseja depositar</label>', '<input name="moedainput" id="moedainputid" placeholder="informe aqui">', '<button id="depositar">Depositar</button>', '<button id="fechar">Fechar</button>');
             $(divbasemoeda).append(divconteudomoeda);
             $('.caixa_apresentacao').before(divbasemoeda);
             $('#depositar').click(function () {
@@ -28,10 +28,35 @@ $(document).ready(function () {
                     resetedosvalores();
                     botaofechar(notiuser);
                     msgtemp(notiuser, 10000);
+                } else if (verificacaoletra(moedavalor)) {
+                    const notiuser = $("<div></div>").addClass("errodiv").text("O valor de deposito não pode conter letras");
+                    $('#moedainputid').before(notiuser);
+                    resetedosvalores();
+                    botaofechar(notiuser);
+                    msgtemp(notiuser, 10000);
+                } else if (verificacaoespaco(moedavalor)) {
+                    const notiuser = $("<div></div>").addClass("errodiv").text("O valor de deposito não pode conter espaço");
+                    $('#moedainputid').before(notiuser);
+                    resetedosvalores();
+                    botaofechar(notiuser);
+                    msgtemp(notiuser, 10000);
+                } else if (caraespecial(moedavalor)) {
+                    const notiuser = $("<div></div>").addClass("errodiv").text("O valor de deposito não pode conter caracteres especiais");
+                    $('#moedainputid').before(notiuser);
+                    resetedosvalores();
+                    botaofechar(notiuser);
+                    msgtemp(notiuser, 10000);
+                } else {
+                    const notiuser = $("<div></div>").addClass("certodiv").text("tudo deu certo!");
+                    $('#moedainputid').before(notiuser);
+                    resetedosvalores();
+                    botaofechar(notiuser);
+                    msgtemp(notiuser, 10000);
                 }
+            
             })
 
-            $('#cancelar').click(function () {
+            $('#fechar').click(function () {
                 $(divbasemoeda).remove();
             })
         }
@@ -72,6 +97,30 @@ $(document).ready(function () {
 
     function resetedosvalores() {
         $("#moedainputid").val("");
+    }
+
+    function verificacaoespaco(stringnome) {
+        const nomefuncao = stringnome.split('');
+        for (let i = 0; i < nomefuncao.length; i++) {
+            if (nomefuncao[i] === ' ') {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    function caraespecial(usuario) {
+        return /[^\w\s]/.test(usuario);
+    }
+
+    function verificacaoletra(letra) {
+        for (let i = 0; i < letra.length; i++) {
+            let char = letra[i];
+            if (/[a-zA-Z]/.test(char)) {
+                return true;
+            }
+        }
+        return false;
     }
 
 });
