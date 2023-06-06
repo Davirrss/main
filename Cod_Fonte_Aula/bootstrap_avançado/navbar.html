@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib/cdn.jsdelivr.net_npm_bootstrap@5.3.0_dist_css_bootstrap.min.css">
+    <title>Nav Bar</title>
+    <style>
+        .navbar-nav .nav-link.active {
+            color: white;
+        }
+
+        .nav-link {
+            text-align: center;
+        }
+
+        section {
+            height: 100vh;
+            background-color: #ccc;
+            padding: 80px;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="cabecalho">
+        <div class="navbar navbar-expand-lg">
+            <div class="container">
+                <h1>Titulo do site</h1>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <nav class="collapse navbar-collapse justify-content-end" id="menu">
+                    <ul class="nav navbar-nav nav-pills">
+                        <li class="nav-item">
+                            <a href="#inicio" class="nav-link active">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#produtos" class="nav-link">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#promocoes" class="nav-link">Promoções</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contatos" class="nav-link">Contato</a>
+                        </li>
+                    </ul>
+                </nav>
+                <button id="btn-checar-emails" class="btn btn-warning" type="button">Checar caixa de entrada</button>
+            </div>
+        </div>
+    </header>
+    <div data-bs-spy="scroll" data-bs-target="#cabecalho">
+        <section id="inicio">
+            <h2>Início</h2>
+        </section>
+        <section id="produtos">
+            <h2>Produtos</h2>
+            <div class="container">
+                <nav class="nav nav-tabs">
+                    <button data-bs-toggle="tab" data-bs-target="#aba1" class="nav-link active" type="button">Eletrônicos</button>
+                    <button data-bs-toggle="tab" data-bs-target="#aba2" class="nav-link" type="button">Masculino</button>
+                    <button data-bs-toggle="tab" data-bs-target="#aba3" class="nav-link" type="button">Feminino</button>
+                    <button data-bs-toggle="tab" data-bs-target="#aba4" class="nav-link" type="button">Infantil</button>
+                    <button data-bs-toggle="tab" data-bs-target="#aba5" class="nav-link" type="button">Jardim</button>
+                </nav>
+                <div class="tab-content">
+                    <div id="aba1" class="tab-pane active">
+                        Conteúdo da aba Eletrônicos
+                    </div>
+                    <div id="aba2" class="tab-pane">
+                        Conteúdo da aba Masculino
+                    </div>
+                    <div id="aba3" class="tab-pane">
+                        Conteúdo da aba Feminino
+                    </div>
+                    <div id="aba4" class="tab-pane">
+                        Conteúdo da aba Infantil
+                    </div>
+                    <div id="aba5" class="tab-pane">
+                        Conteúdo da aba Jardim
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="promocoes">
+            <h2>Promoções</h2>
+        </section>
+        <section id="contatos">
+            <h2>Contato</h2>
+        </section>
+    </div>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="mensagem_alerta" class="toast">
+            <header class="toast-header">
+                <strong>Importante</strong>
+            </header>
+            <div class="toast-body">
+                <p>Você tem 12 mensagens não lidas!</p>
+                <div class="mt-2 pt-2 border-top">
+                    <button data-bs-dismiss="toast" class="btn btn-danger">
+                        Descartar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="lib/cdn.jsdelivr.net_npm_bootstrap@5.3.0_dist_js_bootstrap.bundle.min.js"></script>
+    <script>
+        const ativartoast = document.getElementById('btn-checar-emails');
+        const mensagem = document.getElementById('mensagem_alerta');
+        
+        if(ativartoast) {
+            ativartoast.addEventListener('click' , function(){
+                const toast = new bootstrap.Toast(mensagem);
+                toast.show();
+            })
+        }
+    </script>
+</body>
+
+</html>

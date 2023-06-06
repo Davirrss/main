@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib/cdn.jsdelivr.net_npm_bootstrap@5.3.0_dist_css_bootstrap.min.css">
+    <title>Modal</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalabrir">Abrir modal</button>
+                <div class="modal" id="modalabrir">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5>Titulo do Modal</h5>
+                            </div>
+                            <div class="modal-body">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta ipsum ex, esse odit
+                                    nostrum,
+                                    velit iusto voluptas exercitationem tenetur voluptatem voluptatibus ratione natus!
+                                    Odit
+                                    porro quos fugit vero aliquid quisquam!
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <h5>Rodapé do Modal</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modal_fechar">Modal fechar</button>
+                <div class="modal" id="modal_fechar">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5>Titulo do Modal</h5>
+                                <button data-bs-dismiss="modal" type="button" class="btn-close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta ipsum ex, esse odit
+                                    nostrum,
+                                    velit iusto voluptas exercitationem tenetur voluptatem voluptatibus ratione natus!
+                                    Odit
+                                    porro quos fugit vero aliquid quisquam!
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <h5>Rodapé do Modal</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modal_YN">Modal Y/N</button>
+                <div class="modal" id="modal_YN" data-bs-backdrop="static">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5>Titulo do Modal</h5>
+                            </div>
+                            <div class="modal-body">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta ipsum ex, esse odit
+                                    nostrum,
+                                    velit iusto voluptas exercitationem tenetur voluptatem voluptatibus ratione natus!
+                                    Odit
+                                    porro quos fugit vero aliquid quisquam!
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-danger" type="button" data-bs-dismiss="modal">Cancelar</button>
+                                <button class="btn btn-success" type="button" data-bs-dismiss="modal">Confirmar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="lib/cdn.jsdelivr.net_npm_bootstrap@5.3.0_dist_js_bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            const modalExemplo = new bootstrap.Modal('#modalabrir');
+            setTimeout(function() {
+                modalExemplo.show();
+            }, 3000)
+        });
+    </script>
+</body>
+
+</html>
