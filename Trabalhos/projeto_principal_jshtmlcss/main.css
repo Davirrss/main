@@ -109,6 +109,7 @@ footer {
     border: none;
     border-radius: 20px;
     transition: background-color 1s ease;
+    cursor: pointer;
 }
 
 #botaoentrar:hover {

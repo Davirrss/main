@@ -72,6 +72,7 @@ header {
     border: none;
     transition: background-color 1s ease;
     font-size: 1rem;
+    cursor: pointer;
 }
 
 .userconfig>button:hover {
@@ -82,7 +83,8 @@ header {
     background-color: aliceblue;
 }
 
-.divbasemoeda {
+.divbasemoeda,
+.divbaseprojeto{
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -97,7 +99,8 @@ header {
     background-color: rgba(0, 0, 0, 0.5)
 }
 
-.divconteudomoeda {
+.divconteudomoeda,
+.divconteudoprojeto {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -108,19 +111,43 @@ header {
     border: dashed 2px white;
 }
 
-.divconteudomoeda label {
+.divconteudomoeda label,
+.divconteudoprojeto label {
     font-size: 1.2rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #fff;
     margin-bottom: 0.5rem;
 }
 
-.divconteudomoeda input {
+.divconteudomoeda input,
+.divconteudoprojeto input {
     font-size: 1rem;
     padding: 0.5rem;
     border: none;
     border-radius: 10px;
     outline: solid 2px #000000;
+}
+
+.divconteudoprojeto label {
+    margin-bottom: 1rem;
+}
+
+.divconteudoprojeto input {
+    margin-bottom: 1rem;
+}
+
+.exibicaoimagem.ativado {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem;
+    border: solid 2px white;
+}
+
+.exibicaoimagem.ativado img {
+    height: 100%;
+    width: 100%;
+    max-width: 7rem;
+    max-height: 7rem;
 }
 
 #depositar,
@@ -134,7 +161,6 @@ header {
     cursor: pointer;
     padding: 0.5rem;
     transition: transform 0.5s ease;
-
 }
 
 #depositar:hover,
