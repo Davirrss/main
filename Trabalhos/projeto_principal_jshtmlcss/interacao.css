@@ -136,6 +136,22 @@ header {
     margin-bottom: 1rem;
 }
 
+.notificacaoinput,
+.notificacaoinput2 {
+    margin-bottom: 0.3em;
+    padding-left: 0.5em;
+    background: linear-gradient(280deg, rgba(74,85,61,1) 0%, rgba(0,0,0,1) 100%);
+    color: #fff;
+    border-radius: 10px;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+}
+
+.superado {
+    background: linear-gradient(280deg, rgb(0, 0, 0) 0%, rgb(255, 4, 4) 100%);
+    color: #fff;
+}
+
 .grupobotaoprojeto {
     display: flex;
     flex-direction: row;

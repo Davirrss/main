@@ -30,7 +30,7 @@ footer {
     width: 100vw;
     height: 100vh;
     display: flex;
-    background-image: url(/Trabalhos/projeto_principal_jshtmlcss/imagens/interiorcasa.png);
+    background-image: url(imagens/interiorcasa.png);
     background-size: cover;
     background-repeat: no-repeat;
     justify-content: center;
@@ -41,7 +41,6 @@ footer {
     margin-left: 5%;
     color: #000000;
     backdrop-filter: blur(5px);
-    ;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     border: solid 3px rgba(0, 0, 0, 0.281);
     padding: 20px;
@@ -189,4 +188,21 @@ footer {
 
 ::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, 0.2);
-}   
+}  
+
+@media (max-width: 750px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .infoesquerda {
+        margin-top: 100px;
+    }
+
+    .logindireita {
+        display: flex;
+    }
+}

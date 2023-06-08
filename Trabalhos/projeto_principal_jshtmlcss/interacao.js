@@ -4,7 +4,11 @@ $(document).ready(function () {
 
     var divagaprojetover = false;
 
-    let contadorid = 0
+    const notificacaoinput = $('<div></div>').addClass('notificacaoinput');
+
+    const notificacaoinput2 = $('<div></div>').addClass('notificacaoinput2')
+
+    let contadorid = 0;
 
     var armazenamentoimg;
 
@@ -27,29 +31,29 @@ $(document).ready(function () {
             if (moedavalor === '') {
                 const notiuser = $("<div></div>").addClass("errodiv").text("Você ainda não informou o valor que deseja depositar");
                 $('#moedainputid').before(notiuser);
-                resetedosvalores();
+                resetedosvalores(1);
                 botaofechar(notiuser);
                 msgtemp(notiuser, 10000);
             } else if (verificacaoletra(moedavalor)) {
                 const notiuser = $("<div></div>").addClass("errodiv").text("O valor de deposito não pode conter letras");
                 $('#moedainputid').before(notiuser);
-                resetedosvalores();
+                resetedosvalores(1);
                 botaofechar(notiuser);
                 msgtemp(notiuser, 10000);
             } else if (verificacaoespaco(moedavalor)) {
                 const notiuser = $("<div></div>").addClass("errodiv").text("O valor de deposito não pode conter espaço");
                 $('#moedainputid').before(notiuser);
-                resetedosvalores();
+                resetedosvalores(1);
                 botaofechar(notiuser);
                 msgtemp(notiuser, 10000);
             } else if (caraespecial(moedavalor)) {
                 const notiuser = $("<div></div>").addClass("errodiv").text("O valor de deposito não pode conter caracteres especiais");
                 $('#moedainputid').before(notiuser);
-                resetedosvalores();
+                resetedosvalores(1);
                 botaofechar(notiuser);
                 msgtemp(notiuser, 10000);
             } else {
-                resetedosvalores();
+                resetedosvalores(1);
                 $(divbasemoeda).remove();
             }
         })
@@ -63,22 +67,28 @@ $(document).ready(function () {
     $('#bprojeto').click(function () {
         var divbaseprojeto = $('<div>').addClass('divbaseprojeto');
         var divconteudoprojeto = $('<div>').addClass('divconteudoprojeto');
+        var divinputnoti = $('<div>').addClass('divinputnoti');
+        var divinputnoti2 = $('<div>').addClass('divinputnoti2')
+
+        divinputnoti.append($('<input>').attr({
+            name: 'nomeprojeto',
+            type: 'text',
+            id: 'inputnomeprojeto',
+            placeholder: 'Informe aqui'
+        }));
+
+        divinputnoti2.append($('<input>').attr({
+            name: 'descricaoprojeto',
+            type: 'text',
+            id: 'inputdescricaoprojeto',
+            placeholder: 'Informe aqui'
+        }));
 
         divconteudoprojeto
             .append($('<label>').attr('for', 'nomeprojeto').text('Nome do Projeto'))
-            .append($('<input>').attr({
-                name: 'nomeprojeto',
-                type: 'text',
-                id: 'inputnomeprojeto',
-                placeholder: 'Informe aqui'
-            }))
+            .append(divinputnoti)
             .append($('<label>').attr('for', 'descricaoprojeto').text('Descrição do Projeto'))
-            .append($('<input>').attr({
-                name: 'descricaoprojeto',
-                type: 'text',
-                id: 'inputdescricaoprojeto',
-                placeholder: 'Informe aqui'
-            }));
+            .append(divinputnoti2);
 
         var divexibicaoimagem = $('<div>').addClass('exibicaoimagem');
         var inputfile = $('<input>').attr({
@@ -107,7 +117,7 @@ $(document).ready(function () {
                 resetedosvalores();
                 botaofechar(notiuser);
                 msgtemp(notiuser, 10000);
-            }
+            };
         });
 
         divconteudoprojeto.append(divexibicaoimagem, inputfile);
@@ -118,35 +128,90 @@ $(document).ready(function () {
         divbaseprojeto.append(divconteudoprojeto);
         $('.caixa_apresentacao').before(divbaseprojeto);
 
+        $('#inputnomeprojeto').keyup(function () {
+            var atualinputnome = $(this).val();
+            if (atualinputnome.length > 15) {
+                notificacaoinput.addClass('superado');
+            } else {
+                notificacaoinput.removeClass('superado');
+            }
+            notificacaoinput.text(atualinputnome.length + ' / 15');
+            $('#inputnomeprojeto').before(notificacaoinput);
+        });
+
+        $('#inputdescricaoprojeto').keyup(function () {
+            var atualinputnome = $(this).val();
+            if (atualinputnome.length > 100) {
+                notificacaoinput2.addClass('superado');
+            } else {
+                notificacaoinput2.removeClass('superado');
+            }
+            notificacaoinput2.text(atualinputnome.length + ' / 100');
+            $('#inputdescricaoprojeto').before(notificacaoinput2);
+        });
+
         $('#criarprojeto').click(function () {
             nomeprojeto = $('#inputnomeprojeto').val();
             descricaoprojeto = $('#inputdescricaoprojeto').val();
 
-            if (!divagaprojetover) {
-                var divagadefinitiva = $('<div>').addClass('divagaprojeto');
-                $('.caixainfo').before(divagadefinitiva);
-                divagaprojetover = true;
+            if (nomeprojeto === '' && descricaoprojeto == '') {
+                const notiuser = $("<div></div>").addClass("errodiv").text("Você ainda não informou o nome do projeto e a descrição");
+                $("#imginput").before(notiuser);
+                resetedosvalores(2);
+                botaofechar(notiuser);
+                msgtemp(notiuser, 10000);
+            } else if (nomeprojeto === '') {
+                const notiuser = $("<div></div>").addClass("errodiv").text("Você ainda não informou o nome do projeto");
+                $("#imginput").before(notiuser);
+                resetedosvalores(2);
+                botaofechar(notiuser);
+                msgtemp(notiuser, 10000);
+            } else if (descricaoprojeto == '') {
+                const notiuser = $("<div></div>").addClass("errodiv").text("Você ainda não informou a descrição do projeto");
+                $("#imginput").before(notiuser);
+                resetedosvalores(2);
+                botaofechar(notiuser);
+                msgtemp(notiuser, 10000);
+            } else if (nomeprojeto.length > 15) {
+                const notiuser = $("<div></div>").addClass("errodiv").text("O título do projeto não pode conter mais de 15 carateres");
+                $("#imginput").before(notiuser);
+                resetedosvalores(2);
+                botaofechar(notiuser);
+                msgtemp(notiuser, 10000);
+            } else if (descricaoprojeto > 100) {
+                const notiuser = $("<div></div>").addClass("errodiv").text("A descrição do projeto não pode conter mais de 100 caracteres");
+                $("#imginput").before(notiuser);
+                resetedosvalores(2);
+                botaofechar(notiuser);
+                msgtemp(notiuser, 10000);
+            } else {
+                if (!divagaprojetover) {
+                    var divagadefinitiva = $('<div>').addClass('divagaprojeto');
+                    $('.caixainfo').before(divagadefinitiva);
+                    divagaprojetover = true;
+                }
+
+                var cardprojeto = $('<div>').addClass('cardprojeto');
+                var cardcabecalho = $('<div>').addClass('cardcabecalho');
+                var cardcorpo = $('<div>').addClass('cardcorpo');
+                cardcabecalho.append('<p>').text(nomeprojeto);
+                cardcorpo.append('<p>').text(descricaoprojeto);
+                cardprojeto.append(cardcabecalho, cardcorpo);
+                cardprojeto.css("background-image", "url('" + armazenamentoimg + "')");
+                if (contadorid == 0) {
+                    contadorid += 1
+                } else if (contadorid == 1) {
+                    contadorid += 1
+                } else if (contadorid == 2) {
+                    contadorid += 1
+                } else if (contadorid == 3) {
+                    contadorid = 0
+                }
+                cardprojeto.attr('id', 'numero' + contadorid)
+                $('.divagaprojeto').append(cardprojeto);
+                $(divbaseprojeto).remove();
             }
 
-            var cardprojeto = $('<div>').addClass('cardprojeto');
-            var cardcabecalho = $('<div>').addClass('cardcabecalho');
-            var cardcorpo = $('<div>').addClass('cardcorpo');
-            cardcabecalho.append('<p>').text(nomeprojeto);
-            cardcorpo.append('<p>').text(descricaoprojeto);
-            cardprojeto.append(cardcabecalho, cardcorpo);
-            cardprojeto.css("background-image", "url('" + armazenamentoimg + "')");
-            if (contadorid == 0) {
-                contadorid += 1
-            } else if (contadorid == 1) {
-                contadorid += 1
-            } else if (contadorid == 2) {
-                contadorid += 1
-            } else if (contadorid == 3) {
-                contadorid = 0
-            }
-            cardprojeto.attr('id', 'numero'+ contadorid)
-            $('.divagaprojeto').append(cardprojeto);
-            $(divbaseprojeto).remove();
         })
 
         $('#fecharprojeto').click(function () {
@@ -187,8 +252,18 @@ $(document).ready(function () {
         }, tempo);
     }
 
-    function resetedosvalores() {
-        $("#moedainputid").val("");
+    function resetedosvalores(selecionadovalor) {
+
+        if (selecionadovalor == 1) {
+            $('#moedainputid').val('');
+        } else if (selecionadovalor == 2) {
+            $('#inputdescricaoprojeto').val('');
+            $('#inputnomeprojeto').val('');
+            notificacaoinput2.text('0 / 100');
+            notificacaoinput.text('0 / 15');
+            notificacaoinput.removeClass('superado')
+            notificacaoinput2.removeClass('superado')
+        }
     }
 
     function verificacaoespaco(stringnome) {

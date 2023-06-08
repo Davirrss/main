@@ -43,7 +43,7 @@ $(document).ready(function () {
             resetedosvalores();
             botaofechar(notiuser);
             msgtemp(notiuser, 10000);
-        } else if (nameuser.length <= 4) {
+        } else if (nameuser.length <= 3) {
             const notiuser = $("<div></div>").addClass("errodiv").text("Seu nome de usuário não pode conter menos de 4 digitos.");
             $(".logindireita").append(notiuser);
             resetedosvalores();
