@@ -4,6 +4,8 @@ $(document).ready(function () {
 
     var divagaprojetover = false;
 
+    let contadorid = 0
+
     var armazenamentoimg;
 
     const nomeperfil = $("<div></div>").addClass("nomediv").text(username);
@@ -93,7 +95,7 @@ $(document).ready(function () {
 
                 reader.onload = function (e) {
                     var imagePreview = $('<img>').attr('src', e.target.result);
-                    armazenamentoimg = imagePreview;
+                    armazenamentoimg = e.target.result;
                     divexibicaoimagem.empty().append(imagePreview);
                 };
 
@@ -121,8 +123,8 @@ $(document).ready(function () {
             descricaoprojeto = $('#inputdescricaoprojeto').val();
 
             if (!divagaprojetover) {
-                var divagadefinitiva = $('<div>').addClass('div-container');
-                $('.caixa_apresentacao').before(divagadefinitiva);
+                var divagadefinitiva = $('<div>').addClass('divagaprojeto');
+                $('.caixainfo').before(divagadefinitiva);
                 divagaprojetover = true;
             }
 
@@ -130,7 +132,21 @@ $(document).ready(function () {
             var cardcabecalho = $('<div>').addClass('cardcabecalho');
             var cardcorpo = $('<div>').addClass('cardcorpo');
             cardcabecalho.append('<p>').text(nomeprojeto);
-            cardcorpo.append('<p>').text(descricaoprojeto); 
+            cardcorpo.append('<p>').text(descricaoprojeto);
+            cardprojeto.append(cardcabecalho, cardcorpo);
+            cardprojeto.css("background-image", "url('" + armazenamentoimg + "')");
+            if (contadorid == 0) {
+                contadorid += 1
+            } else if (contadorid == 1) {
+                contadorid += 1
+            } else if (contadorid == 2) {
+                contadorid += 1
+            } else if (contadorid == 3) {
+                contadorid = 0
+            }
+            cardprojeto.attr('id', 'numero'+ contadorid)
+            $('.divagaprojeto').append(cardprojeto);
+            $(divbaseprojeto).remove();
         })
 
         $('#fecharprojeto').click(function () {
