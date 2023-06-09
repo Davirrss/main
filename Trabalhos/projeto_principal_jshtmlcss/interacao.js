@@ -191,11 +191,18 @@ $(document).ready(function () {
                     divagaprojetover = true;
                 }
 
-                var cardprojeto = $('<div>').addClass('cardprojeto');
+                var cardprojeto = $('<div>', {
+                    class: 'cardprojeto',
+                    data: { datanomeprojeto: nomeprojeto, datadescricaoprojeto: descricaoprojeto }
+                });
                 var cardcabecalho = $('<div>').addClass('cardcabecalho');
                 var cardcorpo = $('<div>').addClass('cardcorpo');
+                var botaocardiv = $('<div>').addClass('botaocardiv');
+                var botaocard = $('<button>').addClass('botaocard').text('Mais Informações');
+                botaocardiv.append(botaocard);
                 cardcabecalho.append('<p>').text(nomeprojeto);
                 cardcorpo.append('<p>').text(descricaoprojeto);
+                cardcorpo.append(botaocardiv);
                 cardprojeto.append(cardcabecalho, cardcorpo);
                 cardprojeto.css("background-image", "url('" + armazenamentoimg + "')");
                 if (contadorid == 0) {
@@ -210,6 +217,16 @@ $(document).ready(function () {
                 cardprojeto.attr('id', 'numero' + contadorid)
                 $('.divagaprojeto').append(cardprojeto);
                 $(divbaseprojeto).remove();
+                $('.botaocard').click(function () {
+                    var datampliada = $(this).closest('.cardprojeto').data();
+                    var baseampliadaprojeto = $('<div>').addClass('baseampliadaprojeto');
+                    var ampliadacabecalho = $('<div>').addClass('ampliadacabecalho');
+                    var ampliadacorpo = $('<div>').addClass('ampliadacorpo');
+                    ampliadacabecalho.append('<p>').text(datampliada.datanomeprojeto);
+                    ampliadacorpo.append('<p>').text(datampliada.datadescricaoprojeto);
+                    baseampliadaprojeto.append(ampliadacabecalho, ampliadacorpo);
+                    $('.caixa_apresentacao').before(baseampliadaprojeto);
+                })
             }
 
         })
