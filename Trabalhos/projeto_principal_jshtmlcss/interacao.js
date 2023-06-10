@@ -193,7 +193,7 @@ $(document).ready(function () {
 
                 var cardprojeto = $('<div>', {
                     class: 'cardprojeto',
-                    data: { datanomeprojeto: nomeprojeto, datadescricaoprojeto: descricaoprojeto }
+                    data: { datanomeprojeto: nomeprojeto, datadescricaoprojeto: descricaoprojeto, dataimagem: armazenamentoimg }
                 });
                 var cardcabecalho = $('<div>').addClass('cardcabecalho');
                 var cardcorpo = $('<div>').addClass('cardcorpo');
@@ -217,14 +217,27 @@ $(document).ready(function () {
                 cardprojeto.attr('id', 'numero' + contadorid)
                 $('.divagaprojeto').append(cardprojeto);
                 $(divbaseprojeto).remove();
-                $('.botaocard').click(function () {
+                $('.botaocard').off().click(function () {
                     var datampliada = $(this).closest('.cardprojeto').data();
                     var baseampliadaprojeto = $('<div>').addClass('baseampliadaprojeto');
+                    var ampliadaconteudo = $('<div>').addClass('ampliadaconteudo');
+                    var ampliadabotaozona = $('<div>').addClass('ampliadabotaozona ');
                     var ampliadacabecalho = $('<div>').addClass('ampliadacabecalho');
                     var ampliadacorpo = $('<div>').addClass('ampliadacorpo');
+                    var ampliadaimg = $('<img>').attr('src', datampliada.dataimagem);
+                    var divampliadaimg = $('<div>').addClass('divampliadaimg');
+                    var ampliadabotao = $('<button>', {
+                        id: 'botaofechar',
+                        text: 'Fechar'
+                    }).click(function () {
+                        $(this).closest('.baseampliadaprojeto').remove();
+                    });
+                    ampliadabotaozona.append(ampliadabotao);
                     ampliadacabecalho.append('<p>').text(datampliada.datanomeprojeto);
                     ampliadacorpo.append('<p>').text(datampliada.datadescricaoprojeto);
-                    baseampliadaprojeto.append(ampliadacabecalho, ampliadacorpo);
+                    divampliadaimg.append(ampliadaimg);
+                    ampliadaconteudo.append(ampliadabotaozona, ampliadacabecalho, ampliadacorpo, divampliadaimg);
+                    baseampliadaprojeto.append(ampliadaconteudo);
                     $('.caixa_apresentacao').before(baseampliadaprojeto);
                 })
             }
@@ -252,6 +265,10 @@ $(document).ready(function () {
         }
     });
 
+    $('#bsair').click(function () {
+        window.location.href = 'index.html';
+    });
+    
     function botaofechar(notificacao) {
         const bnotiuser = $("<button></button>").addClass("bfecharnoti").text("X");
         notificacao.append(bnotiuser);

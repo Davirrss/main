@@ -79,12 +79,55 @@ header {
     background-color: rgb(223, 110, 110);
 }
 
+
 .nomediv {
     background-color: aliceblue;
 }
 
+.ampliadaconteudo {
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0);
+}
+
+.ampliadabotaozona {
+    display: flex;
+    justify-content: end;
+}
+
+.ampliadabotaozona button {
+    border-radius: 10px;
+}
+
+.ampliadacorpo {
+    max-width: 500px;
+    flex-wrap: wrap;
+}
+
+.ampliadacabecalho,
+.ampliadacorpo {
+    color: #fff;
+}
+
+.ampliadacabecalho {
+    border-bottom: solid 1px #fff;
+}
+
+.ampliadacorpo {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.divampliadaimg img {
+    max-height: 12em;
+    max-width: 12em;
+}
+
 .divbasemoeda,
-.divbaseprojeto {
+.divbaseprojeto,
+.baseampliadaprojeto {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -183,8 +226,21 @@ header {
     background-color: rgb(36, 197, 36);
 }
 
-#fecharprojeto {
+#fecharprojeto,
+#botaofechar {
     background-color: #db7474;
+}
+
+#botaofechar {
+    padding: 0.5em;
+    font-size: 1.1em;
+    transition: background-color 1s ease;
+    color: #fff;
+    border: none;
+}
+
+#botaofechar:hover {
+    background-color: #a85050;
 }
 
 #fecharprojeto:hover {
@@ -299,6 +355,7 @@ header {
 }
 
 .divagaprojeto {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding-top: 4rem;
     padding-bottom: 4rem;
     background-color: #000000;
@@ -350,6 +407,18 @@ header {
     z-index: 2;
     color: #fff;
     opacity: 0.8;
+}
+
+.botaocardiv {
+    margin-top: 0.5em;
+}
+
+.botaocard {
+    color: #fff;
+    font-size: 1em;
+    padding: 0.3em;
+    background-color: rgb(62, 184, 62);
+    border: none;
 }
 
 .caixainfo {
