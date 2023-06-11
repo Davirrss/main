@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lib/cdn.jsdelivr.net_npm_bootstrap@5.3.0_dist_css_bootstrap.min.css">
+    <title>Projetos</title>
+    <style>
+        header {
+            display: flex;
+            height: 10vh;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 5% 0 5%;
+        }
+
+        body {
+            background: linear-gradient(180deg, #000 0%, #90E280 50%, #000000 100%);
+        }
+
+        #voltarb {
+            font-family: 'Signika Negative';
+            color: red;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            font-size: 30px;
+            transition: background-color 1s ease;
+            cursor: pointer;
+        }
+
+        #voltarb:hover {
+            background-color: antiquewhite;
+        }
+
+        .carousel-item {
+            max-height: 340px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .card-img-overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .imgedit {
+            max-height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="links">
+            <nav>
+                <button id="voltarb">Voltar</button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div id="carousel-ex" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div data-bs-interval="5000" class="carousel-item active">
+                    <img src="imagens/forest-3194475_1280.jpg">
+                    <div class="carousel-caption">
+                        <h5 class="text-light">Lago de Dubai</h5>
+                    </div>
+                </div>
+                <div data-bs-interval="5000" class="carousel-item ">
+                    <img src="imagens/the-caucasus-5299607_1280.jpg">
+                    <div class="carousel-caption">
+                        <h5 class="text-light">Céu azul</h5>
+                    </div>
+                </div>
+                <div data-bs-interval="5000" class="carousel-item ">
+                    <img src="imagens/tree-736882_1280.jpg">
+                    <div class="carousel-caption">
+                        <h5 class="text-light">Montanhas do mar</h5>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" data-bs-target="#carousel-ex" data-bs-slide="prev" type="button">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" data-bs-target="#carousel-ex" data-bs-slide="next" type="button">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel-ex" class="active" data-bs-slide-to="0"></button>
+                <button type="button" data-bs-target="#carousel-ex" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carousel-ex" data-bs-slide-to="2"></button>
+            </div>
+        </div>
+        <h1 class="text-center mt-3">Projetos</h1>
+        <div class="row">
+            <div class="col-4">
+                <article class="card text-bg-dark">
+                    <img class="imgedit" src="imagens/lugarbrancolegal.png">
+                    <div class="card-img-overlay">
+                        <h4>Projeto Minimalista</h4>
+                        <p class="card-text">Projeto Minimalista, sendo uma dos nossos principais conceitos ao bem estar
+                            pessoal, tal obra foi considerada mundialmente um projeto minimalista, que sólidifica os
+                            sentimentos de pureza em forma fisica estática.</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-4">
+                <article class="card text-bg-dark">
+                    <img class="imgedit" src="imagens/lugarmistolegal.png">
+                    <div class="card-img-overlay">
+                        <h4>Projeto Misto</h4>
+                        <p class="card-text">
+                            Sua combinação retrata o passado ancestral e o presente moderno, onde a arte influencia os
+                            limites hormonais.</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-4">
+                <article class="card text-bg-dark">
+                    <img class="imgedit" src="imagens/lugarverdelegal.png">
+                    <div class="card-img-overlay">
+                        <h4>Lazer Fotografico</h4>
+                        <p class="card-text">Lazer Fotografico, proporciona uma vista aconchegante para o cliente como
+                            se fosse uma paisagem realistica com aromas, climas e majoritariamente viva.</p>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="lib/cdn.jsdelivr.net_npm_bootstrap@5.3.0_dist_js_bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('voltarb').addEventListener('click', function () {
+            window.history.back();
+        });
+    </script>
+</body>
+
+</html>
