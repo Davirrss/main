@@ -645,4 +645,9 @@ header {
     .ophistoria {
         display: block; 
     }
+
+    .ophistoriabotao>button:hover {
+        background-color: rgb(228, 97, 97);
+        transform: scale(1.1);
+    }
 }
