@@ -3,6 +3,7 @@ $(document).ready(function () {
     var username = params.get('usuario');
 
     var divagaprojetover = false;
+    var vagapopajuda = false;
 
     const notificacaoinput = $('<div></div>').addClass('notificacaoinput');
 
@@ -23,7 +24,7 @@ $(document).ready(function () {
     $('#bmoeda').click(function () {
         var divbasemoeda = $('<div>').addClass('divbasemoeda');
         var divconteudomoeda = $('<div>').addClass('divconteudomoeda');
-        divconteudomoeda.append('<label for="moedainput">Informe o valor que deseja depositar</label>', '<input name="moedainput" id="moedainputid" placeholder="informe aqui">', '<button id="depositar">Depositar</button>', '<button id="fechar">Fechar</button>');
+        divconteudomoeda.append('<label for="moedainput">Informe o valor que deseja doar</label>', '<input name="moedainput" id="moedainputid" placeholder="informe aqui">', '<button id="depositar">Depositar</button>', '<button id="fechar">Fechar</button>');
         $(divbasemoeda).append(divconteudomoeda);
         $('.caixa_apresentacao').before(divbasemoeda);
         $('#depositar').click(function () {
@@ -68,7 +69,24 @@ $(document).ready(function () {
         var divbaseprojeto = $('<div>').addClass('divbaseprojeto');
         var divconteudoprojeto = $('<div>').addClass('divconteudoprojeto');
         var divinputnoti = $('<div>').addClass('divinputnoti');
-        var divinputnoti2 = $('<div>').addClass('divinputnoti2')
+        var divinputnoti2 = $('<div>').addClass('divinputnoti2');
+        var divbotaoajuda = $('<div>').addClass('divbotaoajuda');
+
+        var botaoajuda = $('<button>', {
+            id: 'botaoajuda',
+        }).click(function () {
+            if (!vagapopajuda) {
+                const basepopupajuda = $('<div>').addClass('basepopupajuda');
+                basepopupajuda.append($('<p>').text('Este formulário corresponde ao projeto que você deseja criar. Apenas você podera vê-lo.'));
+                $('.divbotaoajuda').append(basepopupajuda);
+                vagapopajuda = true;
+            } else {
+                $('.basepopupajuda').remove();
+                vagapopajuda = false;
+            }
+        });
+
+        divbotaoajuda.append(botaoajuda);
 
         divinputnoti.append($('<input>').attr({
             name: 'nomeprojeto',
@@ -85,6 +103,7 @@ $(document).ready(function () {
         }));
 
         divconteudoprojeto
+            .append(divbotaoajuda)
             .append($('<label>').attr('for', 'nomeprojeto').text('Nome do Projeto'))
             .append(divinputnoti)
             .append($('<label>').attr('for', 'descricaoprojeto').text('Descrição do Projeto'))
@@ -151,6 +170,7 @@ $(document).ready(function () {
         });
 
         $('#criarprojeto').click(function () {
+            vagapopajuda = false;
             nomeprojeto = $('#inputnomeprojeto').val();
             descricaoprojeto = $('#inputdescricaoprojeto').val();
 
@@ -198,9 +218,12 @@ $(document).ready(function () {
                 var cardcabecalho = $('<div>').addClass('cardcabecalho');
                 var cardcorpo = $('<div>').addClass('cardcorpo');
                 var botaocardiv = $('<div>').addClass('botaocardiv');
+                var botaocardfechar = $('<button>').addClass('botaocardfechar');
                 var botaocard = $('<button>').addClass('botaocard').text('Mais Informações');
                 botaocardiv.append(botaocard);
+                botaocardfechar.append('<i class="bi bi-x-lg"></i>')
                 cardcabecalho.append('<p>').text(nomeprojeto);
+                cardcabecalho.append(botaocardfechar);
                 cardcorpo.append('<p>').text(descricaoprojeto);
                 cardcorpo.append(botaocardiv);
                 cardprojeto.append(cardcabecalho, cardcorpo);
@@ -240,12 +263,16 @@ $(document).ready(function () {
                     baseampliadaprojeto.append(ampliadaconteudo);
                     $('.caixa_apresentacao').before(baseampliadaprojeto);
                 })
+                $('.botaocardfechar').click(function () {
+                    $(this).closest('.cardprojeto').remove();
+                })
             }
 
         })
 
         $('#fecharprojeto').click(function () {
             $(divbaseprojeto).remove();
+            vagapopajuda = false;
         });
     });
 
@@ -268,7 +295,7 @@ $(document).ready(function () {
     $('#bsair').click(function () {
         window.location.href = 'index.html';
     });
-    
+
     function botaofechar(notificacao) {
         const bnotiuser = $("<button></button>").addClass("bfecharnoti").text("X");
         notificacao.append(bnotiuser);

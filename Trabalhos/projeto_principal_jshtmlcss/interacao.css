@@ -133,7 +133,7 @@ header {
     flex-direction: column;
     justify-content: center;
     position: fixed;
-    z-index: 9999;
+    z-index: 9996;
     left: 0;
     top: 0;
     width: 100%;
@@ -169,6 +169,27 @@ header {
     border: none;
     border-radius: 10px;
     outline: solid 2px #000000;
+}
+
+.divbotaoajuda {
+    display: flex;
+}
+
+/* #botaoajuda {
+    
+} */
+
+.basepopupajuda {
+    background-color: yellow;
+    z-index: 9999;
+    position: fixed;
+    margin-left: 1.5em;
+    border-radius: 10px;
+}
+
+.basepopupajuda p {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0.5em;
 }
 
 .divconteudoprojeto label {
@@ -382,9 +403,23 @@ header {
 }
 
 .cardcabecalho {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     font-size: 1.5rem;
     border-bottom: solid 1px rgb(255, 255, 255) ;
     width: 100%;
+}
+
+.botaocardfechar {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: color 0.7s ease;
+}
+
+.botaocardfechar:hover {
+    color: rgb(255, 0, 0);
 }
 
 .cardcorpo {

@@ -37,6 +37,12 @@ $(document).ready(function () {
             resetedosvalores();
             botaofechar(notiuser);
             msgtemp(notiuser, 10000);
+        } else if (nameuser.length > 10) {
+            const notiuser = $("<div></div>").addClass("errodiv").text("Seu nome de usuário não pode conter mais de 10 caracteres.");
+            $(".logindireita").append(notiuser);
+            resetedosvalores();
+            botaofechar(notiuser);
+            msgtemp(notiuser, 10000);
         } else if (passworduser.length <= 4) {
             const notiuser = $("<div></div>").addClass("errodiv").text("Sua senha não pode conter menos de 4 digitos.");
             $(".logindireita").append(notiuser);

@@ -13,7 +13,8 @@ body {
 
 .nav .nav-link,
 .navbar-brand,
-.navbar-brand:hover {
+.navbar-brand:hover,
+.nav-cardapio .nav-link.active {
     color: #fff;
 }
 
@@ -25,10 +26,19 @@ body {
     font-family: Pacifico, cursive;
 }
 
-.section-title span {
+#sobre-o-restaurante {
+    background-color: #ffeae6;
+}
+
+.text-colored {
     color: #e15f41;
 }
 
-#sobre-o-restaurante {
-    background-color: #ffeae6;
+.nav-cardapio .nav-link.active {
+    background-color: #fff;
+    color: #e15f41;
+}
+
+.nav-cardapio .nav-link {
+    color: #e15f41;
 }
