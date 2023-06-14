@@ -161,6 +161,7 @@ footer {
     background-color: #fff;
     transition: background-color 1s ease;
     border-radius: 60px;
+    cursor: pointer;
 }
 
 #visivel:hover {
